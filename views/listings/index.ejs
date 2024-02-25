@@ -43,6 +43,32 @@
     .visible {
       display: inline;
     }
+    #filters {
+      overflow-x: auto; /* Enable horizontal scrolling */
+      white-space: nowrap; /* Prevent wrapping of filter buttons */
+      padding-bottom: 10px; /* Add some space at the bottom for clarity */
+    }
+
+    .filter {
+      display: inline-block; /* Display filters in a row */
+      margin-right: 10px; /* Add some space between filters */
+    }
+
+    .filter button {
+      white-space: normal; /* Allow text to wrap within buttons */
+    }
+
+    @media (max-width: 768px) {
+      #filters {
+        overflow-x: auto; /* Still allow horizontal scrolling on small screens */
+        white-space: nowrap; /* Prevent wrapping */
+        overflow-y: hidden; /* Hide vertical scrollbar */
+        display: flex; /* Use flexbox for a row layout */
+        flex-wrap: nowrap; /* Prevent wrapping in the row */
+        padding-bottom: 10px; /* Add some space at the bottom for clarity */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+      }
+    }
   </style>
   <div id="filters" class="row row-cols-lg-12 row-cols-md-8 row-cols-sm-6">
     <form method="GET" action="listings/filter/trend">
