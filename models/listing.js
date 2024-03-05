@@ -24,9 +24,7 @@ const listingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User",
     },
-    category: [{
-        type: String
-    }]
+    category: String
 });
 
 //this will delete all the reviews which are present into the perticular object in review section
