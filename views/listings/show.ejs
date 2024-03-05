@@ -143,7 +143,8 @@
 </div>
 
 <script>
-  let mapToken = "<%= process.env.MAP_TOKEN%>";
+  let mapToken =
+    "pk.eyJ1IjoiZGVsdGEtc3R1ZHVlbnQiLCJhIjoiY2xvMDk0MTVhMTJ3ZDJrcGR5ZDFkaHl4ciJ9.Gj2VU1wvxc7rFVt5E4KLOQ";
   console.log(mapToken);
   mapboxgl.accessToken = mapToken;
   const map = new mapboxgl.Map({
