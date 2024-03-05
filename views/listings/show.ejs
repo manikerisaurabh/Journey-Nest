@@ -1,5 +1,7 @@
 <% layout("/layouts/boilerplate.ejs") %>
-
+<script>
+  const coordinates = <%- JSON.stringify(list.geometry.coordinates) %>
+</script>
 <div class="row mt-3">
   <div class="col-8 offset-3">
     <h3><%= list.title %></h3>
@@ -143,13 +145,14 @@
 </div>
 
 <script>
-  let mapToken =
-    "pk.eyJ1IjoiZGVsdGEtc3R1ZHVlbnQiLCJhIjoiY2xvMDk0MTVhMTJ3ZDJrcGR5ZDFkaHl4ciJ9.Gj2VU1wvxc7rFVt5E4KLOQ";
-  console.log(mapToken);
-  mapboxgl.accessToken = mapToken;
-  const map = new mapboxgl.Map({
-    container: "map", // container ID
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9, // starting zoom
-  });
+  // let mapToken =
+  //   "pk.eyJ1IjoiZGVsdGEtc3R1ZHVlbnQiLCJhIjoiY2xvMDk0MTVhMTJ3ZDJrcGR5ZDFkaHl4ciJ9.Gj2VU1wvxc7rFVt5E4KLOQ";
+  // console.log(mapToken);
+  // mapboxgl.accessToken = mapToken;
+  // const map = new mapboxgl.Map({
+  //   container: "map", // container ID
+  //   center: [-74.5, 40], // starting position [lng, lat]
+  //   zoom: 9, // starting zoom
+  // });
+  // const Marker = new mapboxgl.Marker().setLngLat([]).addTo(map);
 </script>
