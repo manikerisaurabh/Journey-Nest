@@ -58,7 +58,9 @@
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Add new listing</a>
         <% if (currUser) { %>
-        <i class="fa-solid fa-user"><span><%= currUser.username %></span></i>
+        <i class="fa-solid fa-user" style="margin-top: 10px">
+          <br /><span><%= currUser.username %></span></i
+        >
         <% } %> <% if (!currUser) { %>
         <a class="nav-link" aria-current="page" href="/signup"
           ><b>Sign up</b></a
